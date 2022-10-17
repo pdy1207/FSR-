@@ -1,4 +1,3 @@
-# Fontend full stack의 길...
+![1](https://user-images.githubusercontent.com/110442250/196225118-efbad912-cac6-4918-9775-ae8a67af9fb4.png)
 
 
-  - CSS / JavaScript / Html의 공부했던 개념 & 깨달은 점을 넣어보자 
