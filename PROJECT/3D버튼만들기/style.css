@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+
+.flip-btn{
+    width: 200px;
+    height: 100px;
+    color:white;
+    text-align: center;
+    line-height: 100px;
+    transform-style: preserve-3d;
+    transition: .5s; 
+    cursor: pointer;
+    /* 0.5 초 만큼 애니메이션 처럼 보이게할거야 */
+}
+
+.flip-btn:hover{
+    transform: rotateX(-90deg);
+}
+
+.front{
+    background-color: goldenrod;
+    height: 100px;
+    transform: translateZ(50px);
+}
+
+.back{
+    background-color: darkgoldenrod;
+    height: 100px;
+    transform: rotateX(90deg) translateZ(150px);
+}
+/* x축을 기준으로 회전을 주게 되는 transform  */
+
+/* 수학적...3D 정보가 많이 들어가서 많이 까다로웠음...ㅜㅜㅜ
+ */
