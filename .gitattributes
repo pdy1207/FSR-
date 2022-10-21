@@ -1,0 +1,5 @@
+Concept && study/** linguist-documentation=false
+Concept && study/** linguist-vendored=false
+*.html linguist-detectable=false
+* linguist-vendored
+*.java linguist-vendored=false
