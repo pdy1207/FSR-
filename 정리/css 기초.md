@@ -1,3 +1,5 @@
+#### css 순서가 읎음...ㅜ
+
 1. `display : flex`
 
             display : flex 로 안하면 깨진다.
