@@ -1,0 +1,61 @@
+/* 기본적으로 가지고있는 css가있음..
+    도움이 안되는경우가 많으니 필요없는건 리셋
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background: url(img/back.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Questrial", sans-serif;
+}
+.main .contents {
+  color: white;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .contents a {
+  color: inherit;
+  text-decoration: none;
+}
+.main .contents h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  margin-bottom: 16px;
+}
+.main .contents p {
+  font-size: 23px;
+  margin-bottom: 16px;
+}
+.main .contents a {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.main .contents a:hover {
+  background-color: red;
+}
+
+@media (max-width: 769px) {
+  .main .contents h1 {
+    font-size: 50px;
+  }
+  .main .contents p {
+    font-size: 20px;
+  }
+  .main .contents a {
+    font-size: 14px;
+  }
+}
