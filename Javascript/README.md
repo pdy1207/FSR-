@@ -12,5 +12,13 @@
  -  myName -> camelCase(낙타 등 모양)
  -  my_Name -> snake_case(뱀모양)
 
+### Javascript 특징
+
+  - 리턴타입이 없다.
+  - 파라미터 타입이 없다.
+  - 리턴에 함수를 작성할 수 있음.(클로저)
+  - js 공부 하려면 바닐라를 많이 연습 하도록 jquery보단 js핵심!! 
+
+
 <hr>
   - [출처](https://nomadcoders.co/javascript-for-beginners/lectures/2866)
