@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login-box{ width: 300px; height: 250px; margin: 200px auto; background-color: #efefef; padding: 2%;}
+        input {width: 97%; height: 30px; margin-bottom: 10px;} 
+        h2 {text-align: center;}
+        button {width: 100%; cursor: pointer; height: 30px; appearance: none; background: #0d6efd; color: #fff;  border: none; border-radius: 5px;}
+        button:hover {background: #fff; color: #0d6efd; font-weight: bold; transition: 0.5s;}
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>설문 조사</h2>
+        <div class="input-box">
+            <input id="name" type="text" placeholder="이름 입력...">
+        </div>
+        <div class="input-box">
+            <input id="hobby" type="text" placeholder="취미 입력...">
+        </div>
+        <div class="input-box">
+            <input id="location" type="text" placeholder="거주 지역 입력...">
+        </div>
+        <div class="input-box">
+            <button onclick="submit()">작성 완료</button>
+        </div>
+    </div>
+</body>
+<script>
+    /*
+    문제 1. input 태그에 id를 입력하시오.
+    완료
+
+    문제 2. 작성 완료 버튼을 눌렀을 때 
+    취미에 영화감상, 운동이 있으면 '좋은 취미를 가졌군요!'를 출력하시오.
+    완료
+
+    문제 3. 작성 완료 버튼을 눌렀을 때 
+    거주 지역에 대전이 아닌 다른 지역을 입력하면
+    '멀리서 오셨군요!' 출력하시오.!
+    완료
+
+    문제 4. 작성 완료 버튼을 눌렀을 때 
+    거주 지역에 값을 입력하지 않았으면 '거주지역을 입력해주세요!' 출력하시오.
+    hint) 값을 입력하지 않으면 ''가 출력됨!
+    완료
+
+    */
+    function submit(){
+        var name = document.getElementById("name").value;
+        console.log('이름은 : '+ name);
+        var hobby = document.getElementById("hobby").value;
+        console.log('취미는 : '+hobby);
+        if(hobby == '운동'){
+            console.log('좋은 취미를 가졌군요!');
+        }
+        if(hobby == '영화감상'){
+            console.log('좋은 취미를 가졌군요!');
+        }
+        var location = document.getElementById("location").value;
+        console.log('거주지역 : '+location);
+        if(location !== '대전'){
+            console.log('멀리서 오셨군요!');
+        }
+        if(location == ''){
+            console.log('거주지역을 입력해주세요!');
+        }
+        
+    }
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text">
+    <input id="password" type="text">
+    <select id="menu">
+        <option value="아메리카노">아메리카노</option>
+        <option value="카페라떼">카페라떼</option>
+        <option value="카페모카">카페모카</option>
+        <option value="아이스티">아이스티</option>
+    </select>
+    M size : <input type="radio" name="size" value="M">
+    L size : <input type="radio" name="size" value="L">
+    <button onclick="doClick()">클릭</button>
+    <button id="btn">jQuery 버튼</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    function doClick(){
+        //바닐라 js 문법
+        var js = document.getElementById('name').value;
+        //jquery 문법
+        var name = $('#name').val();
+        console.log(name);
+        var password = $('#password').val(); 
+        console.log(password);
+        // jquery input 태그 값 가져오기
+        var menu = $('#menu option:selected').val();
+        console.log(menu);
+        // jquery select 태그 값 가져오기
+
+    }
+    //자바스크립트 메소드(함수)는 매개변수에 함수를 넣을 수 있다.
+    //익명함수 (이름이 없는 함수)
+    $('#btn').click(function(){
+        //버튼을 클릭했을때 이름없는  함수를 실행해라
+        // alert('버튼 클릭~!');
+
+        var radio = $('#input[name="size"]:checked').val();
+        console.log(radio);
+        //jQuery 로 radio버튼 값 가져오기
+        if(radio == undefined){
+            alert('선택해주세요');
+            return false;
+        }
+        console.log('선택은 ? '+ radio);
+    });
+    
+</script>
+</html>

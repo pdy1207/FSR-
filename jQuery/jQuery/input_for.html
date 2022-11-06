@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input-box">
+        <input id="fruit_0" type="text" value="사과">
+        <input id="fruit_1" type="text" value="포도">
+        <input id="fruit_2" type="text" value="복숭아">
+        <input id="fruit_3" type="text" value="집">
+        <input id="fruit_4" type="text" value="가고싶다">
+    </div>
+    <button id="btn">확인</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $('#btn').click(function(){
+        //id 접근은 # 
+        //class 접근은 .
+        var size = $('.input-box').children().length; //자식 길이를 알아냄
+        for(var i=0; i<size; i++){
+            var fruit = $('#fruit_'+i).val();
+            console.log(fruit);
+        }
+    });
+</script>
+</html>
