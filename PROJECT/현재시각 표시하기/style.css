@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.container img {
+  width: 100%;
+  object-fit: cover;
+}
+#current-time {
+  position: absolute;
+  color: white;
+  font-size: 8rem;
+}

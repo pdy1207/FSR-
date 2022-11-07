@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DY 현재시각 표시하기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="./img/benz.jpg" />
+      <h1 id="current-time"></h1>
+    </div>
+  </body>
+  <script>
+    const time = document.getElementById("current-time");
+    //id 가 'current-time' 인 요소
+
+    //1초마다 현재 시각 업데이트
+    setInterval(() => {
+      const date = new Date(); //새로운 Date 객체 생성
+      time.innerHTML = date.toLocaleTimeString();
+    }, 1000);
+  </script>
+</html>
