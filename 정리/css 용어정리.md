@@ -1,4 +1,19 @@
-### css 순서가 읎음...ㅜ
+### css 용어정리
+
+#### 보통  margin padding flex 알면 끝  3개가 끝.
+
+-. `margin` 
+
+            margin: 0 0 20px
+            margin: 10px; // 동서남북 모두 10px 패딩
+            margin: 5px(위) 10px(오른쪽&왼쪽) 0(아래);
+            margin: 5px(위&아래) 10px(오른쪽&왼쪽);
+            margin: 10px(위) 20px(오른쪽) 30px(아래쪽) 10px(왼쪽)
+            ※ 단점은 소스가 많이 길어짐.....
+            margin-right
+            margin-letf
+            margin-top
+            margin-bottom
 
 1. `display : flex`
 
@@ -7,6 +22,7 @@
             자식테이블을 분리 : flex-basis : 20%
             즉 부모테이블 기준으로 css 너비와  flex를 많이씀
             border가 스케치 느김이라고 생각하면됨.
+            display : flex 하면 세로 정렬이 되는데 flex-direction column으로 변환 
             
             
 2. `z-index`
@@ -32,3 +48,7 @@
 6. `transition`
 
             속성은 CSS 속성이 변화할 때 서서히 변화시키는 속성이다. (버튼 애니메이션 사용 시 활용도 多)
+            
+7. `list-style` 
+
+           ul태그의 있는 점 을 없앰 
