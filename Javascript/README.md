@@ -35,4 +35,5 @@
 
 
 <hr>
-  - [출처](https://nomadcoders.co/javascript-for-beginners/lectures/2866)
+
+[출처](https://nomadcoders.co/javascript-for-beginners/lectures/2866)
