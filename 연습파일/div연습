@@ -1,0 +1,32 @@
+웹 사이트 구축 시 큰 틀을 생각함 == container
+
+<div class="container">
+      <!-- div 디폴트 배치는 세로
+            가로로 배치하고 싶으면 display :: inline-block -->
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <!-- flex는 기본 가로배치 -->
+    <div class="row">
+      <div class="item">오늘은 화요일입니다.</div>
+      <div class="item">오늘은 화요일입니다.</div>
+      <div class="item">오늘은 화요일입니다.</div>
+    </div>
+
+
+
+      .box {
+        width: 250px;
+        height: 300px;
+        border: 1px solid black;
+        display: inline-block;
+      }
+      .row {
+        display: flex;
+        justify-content: center;
+      }
+      .item {
+        flex-basis: 30%;
+        border: 1px solid black;
+      }
