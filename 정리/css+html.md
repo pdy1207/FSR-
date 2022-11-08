@@ -27,7 +27,21 @@
       margin-letf
       margin-top
       margin-bottom
+ 
+ ※ padding
    
+    padding: 1em;
+
+    padding: 5% 10%;
+
+    padding: 1em 2em 2em;
+
+    padding: 5px 1em 0 2em;
+
+    /* 전역 값 */
+    padding: inherit;
+    padding: initial;
+    padding: unset;
    
 #### HTML
       
