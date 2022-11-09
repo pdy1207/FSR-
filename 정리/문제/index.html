@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 1000px;
+        height: 400px;
+        display: flex;
+        background-color: #ccc;
+        margin: 120px auto;
+      }
+      .col {
+        height: 100%;
+        flex: 1;
+        color: #fff;
+        padding: 25px;
+        position: relative;
+        transition: 0.6s;
+      }
+      .col:nth-child(1) {
+        background-color: #283491;
+      }
+      .col:nth-child(2) {
+        background-color: #f18684;
+      }
+      .col:nth-child(3) {
+        background-color: #6ee2f1;
+      }
+      .col h2 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .caption {
+        font-size: 12px;
+        text-align: center;
+        font-weight: 600;
+      }
+      .col img {
+        position: absolute;
+        width: 200px;
+        right: 0;
+        bottom: 0;
+      }
+      .caption button {
+        border-radius: 30px;
+        background: transparent;
+        outline: none;
+        transition: all 0.4s;
+        border: 1px solid #fff;
+        padding: 8px 18px;
+        color: #fff;
+        font-size: 12px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .caption button:hover {
+        color: black;
+        background-color: wheat;
+      }
+      .col:hover {
+        flex-grow: 2.5;
+      }
+      .col:hover .caption {
+        display: block;
+      }
+      .col:hover h2 {
+        text-align: left;
+      }
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col">
+        <h2>크로스핏</h2>
+        <div class="caption">
+          <p>
+            크로스핏은 2000년 미국에서 그레그 글래스먼과 로런 제나이에 의해
+            설립된 피트니스 단체. 상당히 힘들다. 재밌다.😜
+          </p>
+          <button type="button">know More</button>
+        </div>
+        <img src="./img/img1.png" alt="크로스핏" />
+      </div>
+
+      <div class="col">
+        <h2>웨이트 훈련</h2>
+        <div class="caption">
+          <p>
+            근육의 성장 원리는 '부하'의 원리를 기본작용으로 이루어진다. 웨이트
+            트레이닝(weight training)의 뜻 자체가 중력저항운동으로써 기구나
+            머신을 이용하여 중력에 대항하여 근육에 자극을 주는 운동이다.
+          </p>
+          <button type="button">know More</button>
+        </div>
+        <img src="./img/img2.png" alt="웨이트" />
+      </div>
+
+      <div class="col">
+        <h2>요가</h2>
+        <div class="caption">
+          <p>
+            요가는 과거 인도의 힌두교 수행의 방법이다. 당연히 당시 수행자였던
+            부처는 요가를 수행했고, 경지에 올랐다고 표현되고 있다.
+          </p>
+          <button type="button">know More</button>
+        </div>
+        <img src="./img/img3.png" alt="요가" />
+      </div>
+    </div>
+  </body>
+</html>
