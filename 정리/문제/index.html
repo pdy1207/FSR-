@@ -6,120 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
+      body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      .container {
-        width: 1000px;
-        height: 400px;
+      .section {
+        width: 80%;
+        height: auto;
+        background-color: #efefef;
+        margin: 50px auto;
+      }
+      .row {
         display: flex;
-        background-color: #ccc;
-        margin: 120px auto;
+        margin-top: 15px;
+        justify-content: space-between;
       }
-      .col {
-        height: 100%;
-        flex: 1;
-        color: #fff;
-        padding: 25px;
-        position: relative;
-        transition: 0.6s;
+      .gallery-title h1 {
+        font-size: 36px;
+        font-weight: 700;
       }
-      .col:nth-child(1) {
-        background-color: #283491;
-      }
-      .col:nth-child(2) {
-        background-color: #f18684;
-      }
-      .col:nth-child(3) {
-        background-color: #6ee2f1;
-      }
-      .col h2 {
-        text-align: center;
-        font-size: 22px;
+      .gallery-title p {
+        color: #777;
+        font-size: 16px;
         font-weight: 600;
       }
-      .caption {
-        font-size: 12px;
-        text-align: center;
-        font-weight: 600;
+      .gallery-col img {
+        border-radius: 10px;
+        width: 100%;
+        height: 98%;
+        object-fit: cover;
       }
-      .col img {
+      .layer h3 {
         position: absolute;
-        width: 200px;
-        right: 0;
+        font-size: 20px;
+        color: rgba(46, 49, 49, 1);
+        opacity: 0;
+        transition: 0.8s;
+        transform: translateY(-40%);
+        left: 40%;
         bottom: 0;
       }
-      .caption button {
-        border-radius: 30px;
-        background: transparent;
-        outline: none;
-        transition: all 0.4s;
-        border: 1px solid #fff;
-        padding: 8px 18px;
-        color: #fff;
-        font-size: 12px;
+      .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 98%;
+      }
+      .layer:hover {
         cursor: pointer;
-        margin-top: 20px;
+        background-color: rgba(232, 232, 232, 0.8);
       }
-      .caption button:hover {
-        color: black;
-        background-color: wheat;
+      .layer:hover h3 {
+        opacity: 1;
+        bottom: 50%;
       }
-      .col:hover {
-        flex-grow: 2.5;
-      }
-      .col:hover .caption {
-        display: block;
-      }
-      .col:hover h2 {
-        text-align: left;
-      }
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
+      .gallery-col {
+        position: relative;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="col">
-        <h2>크로스핏</h2>
-        <div class="caption">
-          <p>
-            크로스핏은 2000년 미국에서 그레그 글래스먼과 로런 제나이에 의해
-            설립된 피트니스 단체. 상당히 힘들다. 재밌다.😜
-          </p>
-          <button type="button">know More</button>
-        </div>
-        <img src="./img/img1.png" alt="크로스핏" />
+    <div class="section gallery">
+      <div class="gallery-title">
+        <h1>넷플릭스 시리즈 수리남 소개</h1>
+        <p>
+          드라마의 시간적 배경은 2008년부터 2009년 사이이다. 회상 장면까지
+          따지면 강인구가 태어난 해이자 베트남 전쟁이 개시된 1968년까지 거슬러
+          올라간다. 극중 1990년대로 추정되는 시기에 배경음악으로 윤수일의 노래
+          '아파트'가 흘러나온다.
+        </p>
       </div>
-
-      <div class="col">
-        <h2>웨이트 훈련</h2>
-        <div class="caption">
-          <p>
-            근육의 성장 원리는 '부하'의 원리를 기본작용으로 이루어진다. 웨이트
-            트레이닝(weight training)의 뜻 자체가 중력저항운동으로써 기구나
-            머신을 이용하여 중력에 대항하여 근육에 자극을 주는 운동이다.
-          </p>
-          <button type="button">know More</button>
+      <div class="row">
+        <div class="gallery-col">
+          <img src="./img/하정우.PNG" alt="하정우" />
+          <div class="layer">
+            <h3>강인구 역</h3>
+          </div>
         </div>
-        <img src="./img/img2.png" alt="웨이트" />
+
+        <div class="gallery-col">
+          <img src="./img/황정민.PNG" alt="황정민" />
+          <div class="layer">
+            <h3>전요한 역</h3>
+          </div>
+        </div>
+
+        <div class="gallery-col">
+          <img src="./img/유연석.PNG" alt="유연석" />
+          <div class="layer">
+            <h3>데이빗 박 역</h3>
+          </div>
+        </div>
+
+        <div class="gallery-col">
+          <img src="./img/박해수.PNG" alt="박해수" />
+          <div class="layer">
+            <h3>최창호 역</h3>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="col">
-        <h2>요가</h2>
-        <div class="caption">
-          <p>
-            요가는 과거 인도의 힌두교 수행의 방법이다. 당연히 당시 수행자였던
-            부처는 요가를 수행했고, 경지에 올랐다고 표현되고 있다.
-          </p>
-          <button type="button">know More</button>
-        </div>
-        <img src="./img/img3.png" alt="요가" />
+    <div class="section content">
+      <div class="gallery-title">
+        <h1>수리남 줄거리</h1>
+        <p>
+          드라마의 시간적 배경은 2008년부터 2009년 사이이다. 회상 장면까지
+          따지면 강인구가 태어난 해이자 베트남 전쟁이 개시된 1968년까지 거슬러
+          올라간다. 극중 1990년대로 추정되는 시기에 배경음악으로 윤수일의 노래
+          '아파트'가 흘러나온다.
+        </p>
       </div>
     </div>
   </body>
