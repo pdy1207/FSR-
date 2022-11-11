@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도영 NETFLIX</title>
+    <!-- 구글 무료 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 아이콘 -->
+    <!-- 웹브라우저 탭 아이콘 이미지 -->
+    <link
+      rel="shortcut icon"
+      href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico"
+    />
+    <!-- (구) 버전임 신버전 쓰고 싶은 사람은 fontawesome 사이트 접속해서 6버전 키 발급받기~!
+        야크 털 깎기
+    -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 영화 상세정보 -->
+      <div class="movie-section">
+        <div class="back">
+          <!-- 뒤로가기 -->
+          <a href="#" onclick="doClose()">Back to Home</a>
+        </div>
+
+        <div class="section-left">
+          <!-- 영화 상세 정보(상영시간, 별점, 감독, 배우, 줄거리....) -->
+          <!-- 영화 제목 -->
+          <div id="movie-title" class="movie-title"></div>
+          <!-- 평점, 수상내역, 상영시간, 개봉년도 -->
+          <div class="movie-rating">
+            <span
+              >Rating <i class="fa fa-star"></i> : <span id="rating"></span>
+            </span>
+            <span
+              >Votes <i class="fa fa-thumbs-up"></i> : <span id="votes"></span>
+            </span>
+            <span
+              >Runtime <i class="fa fa-film"></i> : <span id="runtime"></span>
+            </span>
+            <span
+              >Year <i class="fa fa-calendar"></i> : <span id="year"></span>
+            </span>
+          </div>
+          <!-- 영화 줄거리 -->
+          <div id="movie-plot" class="movie-plot"></div>
+          <!-- 감독, 배우, 장르, 수상내역 -->
+          <div class="movie-info">
+            <div>
+              <span>Director</span>
+              <span id="director"></span>
+            </div>
+            <div>
+              <span>Stars</span>
+              <span id="stars"></span>
+            </div>
+            <div>
+              <span>Generes</span>
+              <span id="generes"></span>
+            </div>
+            <div>
+              <span>Languages</span>
+              <span id="languages"></span>
+            </div>
+            <div>
+              <span>Awards</span>
+              <span id="awards"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="poster-img" class="section-right">
+          <!-- 영화 포스터 이미지 -->
+        </div>
+      </div>
+
+      <!-- omdb에서 가져올 영화,시리즈 -->
+      <div class="movie-list">
+        <div class="site-title">
+          <h2>DY NETFLIX 😎</h2>
+        </div>
+        <!-- 영화 -->
+        <div class="movie-row">
+          <div class="item" data-tilt onclick="getMovieDetail(this)">
+            <!-- this? item에 자식이 this안에 다 들어감
+                즉, this라는 것은 나 자신을 포함한 자식 태그들 까지 포함
+            -->
+            <!-- 영화  포스터 이미지 -->
+            <div id="movie-poster-0" class="poster"></div>
+            <!-- 영화 제목 -->
+            <h4 id="movie-title-0" class="title"></h4>
+            <!-- 영화 개봉날짜 -->
+            <p id="movie-year-0" class="year"></p>
+            <input id="movie-id-0" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetail(this)">
+            <div id="movie-poster-1" class="poster"></div>
+            <h4 id="movie-title-1" class="title"></h4>
+            <p id="movie-year-1" class="year"></p>
+            <input id="movie-id-1" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetail(this)">
+            <div id="movie-poster-2" class="poster"></div>
+            <h4 id="movie-title-2" class="title"></h4>
+            <p id="movie-year-2" class="year"></p>
+            <input id="movie-id-2" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetail(this)">
+            <div id="movie-poster-3" class="poster"></div>
+            <h4 id="movie-title-3" class="title"></h4>
+            <p id="movie-year-3" class="year"></p>
+            <input id="movie-id-3" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetail(this)">
+            <div id="movie-poster-4" class="poster"></div>
+            <h4 id="movie-title-4" class="title"></h4>
+            <p id="movie-year-4" class="year"></p>
+            <input id="movie-id-4" type="hidden" />
+          </div>
+        </div>
+        <!-- 시리즈 물 -->
+        <div class="series-row">
+          <div class="item" data-tilt onclick="getSeriesDetail(this)">
+            <div id="series-poster-0" class="poster"></div>
+            <h4 id="series-title-0" class="title"></h4>
+            <p id="series-year-0" class="year"></p>
+            <input id="series-id-0" type="hidden" />
+          </div>
+
+          <div class="item" data-tilt onclick="getSeriesDetail(this)">
+            <div id="series-poster-1" class="poster"></div>
+            <h4 id="series-title-1" class="title"></h4>
+            <p id="series-year-1" class="year"></p>
+            <input id="series-id-1" type="hidden" />
+          </div>
+
+          <div class="item" data-tilt onclick="getSeriesDetail(this)">
+            <div id="series-poster-2" class="poster"></div>
+            <h4 id="series-title-2" class="title"></h4>
+            <p id="series-year-2" class="year"></p>
+            <input id="series-id-2" type="hidden" />
+          </div>
+
+          <div class="item" data-tilt onclick="getSeriesDetail(this)">
+            <div id="series-poster-3" class="poster"></div>
+            <h4 id="series-title-3" class="title"></h4>
+            <p id="series-year-3" class="year"></p>
+            <input id="series-id-3" type="hidden" />
+          </div>
+
+          <div class="item" data-tilt onclick="getSeriesDetail(this)">
+            <div id="series-poster-4" class="poster"></div>
+            <h4 id="series-title-4" class="title"></h4>
+            <p id="series-year-4" class="year"></p>
+            <input id="series-id-4" type="hidden" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/vanilla-tilt.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/script.js"></script>
+</html>
