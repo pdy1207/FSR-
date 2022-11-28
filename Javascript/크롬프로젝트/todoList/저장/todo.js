@@ -16,4 +16,4 @@ function handleToDoSubmit(event) {
   newTodo.value = "";
   paintToDo(newTodo);
 }
-toDoForm.addEventListener("submit", handleToDoSubmit);
+toDoForm.addEventListener("submit", handleToDoSubmit)
