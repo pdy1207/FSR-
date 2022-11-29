@@ -1,0 +1,17 @@
+const arr = [1234, 5454, 223, 122 , 45 , 6775, 334]
+
+function sexyFunction(item){ return item <= 1000}
+
+//1000보다 큰 수를 삭제하자 
+arr.filter(sexyFunction)
+
+출력  결과 : [223, 122, 45, 334]
+
+arr 변수 안의 배열을 넣는다 / 
+섹시 함수(여기서 item들은 arr배열안의 item 들이다.) {return 하자 무엇을? 배열안의 item 중 1000보다 같거나 작은 숫자를}
+
+arr.filter(섹시함수)
+
+필터 라는 놈으로서 거르고 출력 이 된다.
+
+출력결과 [223, 122, 45, 334]
