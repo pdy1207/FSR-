@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="main-btn bg-red">더알아보기</button>
+    <!-- 뼈대 디자인 class와 색상 class디자인을 나눠놓자!! 
+        즉, 이러한것이 Object Oriented CSS 
+        1. css양이 줄어듬
+        2. 유지보수 편리
+    -->
+    <button class="main-btn bg-blue f-small">구매하기</button>
+    <!-- class작명할 때 창의력이 고민돼... -->
+    <!-- BEM을 따라하자!
+        BEM? Block__Element--Modifier
+        예시는 밑에있음
+        1. 덩어리 이름을 생각하자 
+        2. 덩어리 이름__역할
+        시간 절약 얏호~!
+        3. 덩어리 이름 __ 역할 --세부특징 근데 이것보단 뼈대 색상 나누자
+        __ 싫으면 - 이렇게하장
+
+        ※ BEM / OOCSS 구글링 ㄱㄱ
+    -->
+    <div class="profile">
+      <img class="profile__img" src="" />
+      <h4 class="profile__title"></h4>
+      <p class="profile__content"></p>
+      <button class="profile__button--red">버튼1</button>
+      <button class="profile__button--blue">버튼2</button>
+    </div>
+  </body>
+</html>

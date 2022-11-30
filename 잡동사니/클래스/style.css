@@ -1,0 +1,28 @@
+:root {
+  --back: #b2ccd6;
+  --font: #105670;
+}
+/* Utilty class 만들어두면 펀안~~*/
+.f-small {
+  font-size: 12px;
+}
+.f-mid {
+  font-size: 16px;
+}
+.f-lg {
+  font-size: 20px;
+}
+body {
+  background-color: var(--back);
+}
+.main-btn {
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-blue {
+  background-color: blue;
+}
