@@ -1,0 +1,13 @@
+/\S+@\S+\.\S+/.test('aaaadfas12@bbb.ccc')
+
+여러번찾아달라고하면 +를해야함 하나만한다고하면 문자 하나만 앎
+
+비밀번호 대문자?
+$('form').on('submit',function(e){
+
+  var 비번 = document.getElementById('pw').value;
+  if ( /[A-Z]/.test(비번) == false ){
+    alert('대문자없는데요')
+  }
+
+});
