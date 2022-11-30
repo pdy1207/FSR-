@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-background {
+  width: 100%;
+  height: 500px;
+  background-image: url("https://miro.medium.com/max/1400/1*2xsLeLNqKwIoGOQlw8O6Ug.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #efefef;
+  font-size: 35px;
+}
+
+.main-button {
+  padding: 15px;
+  font-size: 20px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s linear;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  margin: auto;
+  width: 200px;
+}
+.main-button:hover {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  border: none;
+}
+.main-content {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: -50px;
+  width: 80%;
+  height: 200px;
+  background-color: #efefef;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-content h4 {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
