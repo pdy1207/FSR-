@@ -1,81 +1,35 @@
-/* ================================= */
-var 이름 = "kim";
-let 이름 = "kim";
-const 이름 = "kim";
-/* 무슨차이? 
-        let ? 재 선언 x 변수 까먹고 또만들 수  있는걸 방지
-        const ? 재 선언 x 재 할당조차 안됨. 변하면 안되는 값을 보관하기.
-        var ? 재 선언도 되고 재 할당도 되고 범위로서는 함수 나머지는 {}
-      */
-/* 애니메이션은 css로 해야함. */
-$(".login").on("click", function () {
-  $(".black-bg").addClass("show-modal");
-});
-$(".btn").on("click", function () {
-  $(".black-bg").css("display", "none");
-});
-// document.querySelector('.hello').innerHTML = "바보";
-// $(".hello").html = "바보";
-/* HTML 조작문법을 쉽게 바꿔주는 라이브러리들
-   jQuery, React, Vue등  프론트3대장은 JS를 잘해야함.
-*/
-/* jQuery
-  JS 의 라이브러리며, 코드가 짧아지고 간편함.
-  */
-
-document.querySelector(".list-group");
-/*
-  querySelector
-  하지만 맨 위에 나오는 한개만 찾아줌.
-  다 찾아주는건 querySelector + All
-  즉 몇번째? querySelectorAll()[0]...
+/* 버튼0누르면 
+- 모든버튼에 붙은 orange 클래스명 제거
+- 버튼 0 에 오렌지 클래스명추가 
+- 모든 div에 붙은 show 클래스명 제거
+- div 0에 show 클래스명 추가
 */
 
-document
-  .querySelector(".navbar-toggler")
-  .addEventListener("click", function () {
-    document.querySelector(".list-group").classList.toggle("show");
-  });
-/*
-    toggle? show가 있으면 제거 없으면 추가
-  */
-/* ================================= */
+/* 
+    var ? let ? 재선언 차이도 있지만 변수의 범위차이.
 
-function 삼육구게임(num) {
-  if (num % 3 == 0) {
-    console.log("박수");
-  } else {
-    console.log("통과");
-  }
-} //3의 배수일땐 박수 아니면 통과~!
-function 삼육구게임업그레이드(num) {
-  if (num.value == "") {
-    alert("장난 ㄴㄴ");
-  }
-  if (num % 9 == 0) {
-    console.log("박수x2");
-  } else if (num % 3 == 0) {
-    console.log("박수");
-  } else {
-    console.log("통과");
-  }
-} //3의 배수일땐 박수 / 9의 배수에서는 박수 x 2
-function 합격했냐(num1, num2) {
-  if (num1 < 40 || num2 < 40) {
-    console.log("불합격");
-  } else if (num1 + num2 >= 120) {
-    console.log("합격");
-  } else {
-    console.log("불합격");
-  }
-} //시험합격?
-//다크모드 ajax문법
-var count = 0;
-$(".badge").on("click", function () {
-  count += 1;
-  if (count % 2 == 1) {
-    $(".badge").html("Light 🔄");
-  } else {
-    $(".badge").html("Dark 🔄");
-  }
-});
+    "제 코드가 좋은 코드인지 모르겠어요" 
+
+    1. 원하는 기능이 잘 구현되었는가
+    2. 확장성좋은가
+    3. 나중에 관리가 쉬울 것인가
+    4. 성능문제 없는가
+
+    이런거 체크해보면 됩니다. 그럼 자연스럽게 좋은 코드임  
+    ===
+    for 문법의 용도를 잘 기억해둡시다.  
+    코드를 반복실행
+    비슷한 코드들을 직접 복붙하는게 귀찮으면 for 반복문을 쓰는 것일 뿐이지 
+    for 부터 써놓고 무슨 코드를 채울지 고민하고 그러면 안됩니다.  
+*/
+
+for (let i = 0; i < $(".tab-button").length; i++) {
+  $(".tab-button")
+    .eq(i)
+    .on("click", function () {
+      $(".tab-button").removeClass("orange");
+      $(".tab-button").eq(i).addClass("orange");
+      $(".tab-content").removeClass("show");
+      $(".tab-content").eq(i).addClass("show");
+    });
+}
