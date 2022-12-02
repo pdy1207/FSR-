@@ -23,13 +23,77 @@
     for 부터 써놓고 무슨 코드를 채울지 고민하고 그러면 안됩니다.  
 */
 
-for (let i = 0; i < $(".tab-button").length; i++) {
-  $(".tab-button")
-    .eq(i)
-    .on("click", function () {
-      $(".tab-button").removeClass("orange");
-      $(".tab-button").eq(i).addClass("orange");
-      $(".tab-content").removeClass("show");
-      $(".tab-content").eq(i).addClass("show");
-    });
+// for (let i = 0; i < $(".tab-button").length; i++) {
+//   $(".tab-button")
+//     .eq(i)
+//     .on("click", function () {
+//       탭열기(i);
+//     });
+// }
+$(".list").click(function (e) {
+  /* 지금누른버튼 e.targer 
+    html  data-id="0" 대입함
+    이벤트 리스너 1개만 써도 개발가능.
+  */
+  console.log(e.target.dataset.id);
+  탭열기(e.target.dataset.id);
+});
+
+function 탭열기(숫자) {
+  $(".tab-button").removeClass("orange");
+  $(".tab-button").eq(숫자).addClass("orange");
+  $(".tab-content").removeClass("show");
+  $(".tab-content").eq(숫자).addClass("show");
 }
+
+var car = ["소나타", 50000, "white"]; //배열
+var car2 = { name: "소나타", price: [50000, 30000, 40000] }; //Object
+
+document.querySelector(".car-title").innerHTML = car2.name;
+document.querySelector(".car-price").innerHTML = car2.price[2];
+
+/* array/object 차이점
+   array : 자료간 순서 존재
+          자료간 정리 가능 car.sort()...
+          중간에 자르기도 가능 car.slice(1,3).... 
+   object : 순서개념 x 
+            아무거나 다 넣을 수 있음
+            object, array 넣기도 가능..!
+
+  복잡하게 생긴 array , Object 자료 다룰 땐 출력해보고 시작기호도
+  확인하면 쉽다~!
+*/
+var pants = [28, 30, 32, 34];
+var shirts = [95, 100, 105];
+$(".form-select")
+  .eq(0)
+  .on("input", function () {
+    var value = this.value;
+    if (value == "셔츠") {
+      $(".form-select").eq(1).removeClass("form-hide");
+      $(".form-select").eq(1).html("");
+      shirts.forEach(function (a) {
+        $(".form-select").eq(1).append(`<option>${a}</option>`);
+      });
+    } else if (value == "바지") {
+      $(".form-select").eq(1).removeClass("form-hide");
+      $(".form-select").eq(1).html("");
+      pants.forEach((a) => {
+        $(".form-select").eq(1).append(`<option>${a}</option>`);
+      }); //arrow function this값이 달라질 수 있음.
+    }
+  });
+var products = [
+  { id: 0, price: 70000, title: "Blossom Dress" },
+  { id: 1, price: 50000, title: "Springfield Shirt" },
+  { id: 2, price: 60000, title: "Black Monastery" },
+];
+
+products.forEach((a, i) => {
+  var 템플릿 = `<div class="col-sm-4">
+          <img src="https://via.placeholder.com/600" class="w-100">
+          <h5>${products[i].title}</h5>
+          <p>가격 : ${products[i].price}</p>
+        </div>`;
+  $(".row").append(템플릿);
+});
