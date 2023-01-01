@@ -16,7 +16,8 @@
       //getElementById === 셀렉터
       document.getElementById("hi").innerHTML = "JS 고수에요";
       // 1. 바꿀요소ID 2. 무엇을 3. 어떻게
-      //하나하나 상세히 설명할수 있어야함.
+
+      //하나하나 상세히 설명할수 있어야함
 
       = 숙제) 16px 글씨 사이즈를 줄이자 
       document.getElementById("hello").style.fontSize = "16px";
