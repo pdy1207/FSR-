@@ -39,6 +39,12 @@
   3. 원할때 최종스타일로 변하라고 코드짬 <br>
   4. 시작스타일에 transition 추가 <br>
 
+### `조건문`
+
+  ※ 사실은 if문 안엔 true / false 넣어야 잘 작동한다.
+            
+            != 다름 === 엄격함 == 느슨함
+- 조건 2개 이상을 비교하고 싶으면 && and || or
       
 <hr>
       
@@ -47,3 +53,10 @@
                               document.getElementsByClassName('list-group')[0].classList.toggle('show');  
                               //toggle 있으면 제거 없으면 추가해줘라는 태그
                           })
+                          
+                          
+                  input 에 입력한 값이 바뀔때 뭔가 실행하려면? 
+                           change input으로부터 포커스를 잃었을때.
+                          document.getElementById('id').addEventListener('change',function(){ 
+                               console.log('안녕')
+                           })
