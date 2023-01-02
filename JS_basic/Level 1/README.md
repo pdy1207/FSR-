@@ -40,7 +40,7 @@
   4. 시작스타일에 transition 추가 <br>
 
       
-      
+<hr>
       
               document.getElementsByClassName('navbar-toggler')
                           [0].addEventListener('click',function(){
