@@ -56,7 +56,7 @@
             document.getElementsByClassName('navbar-toggler')
             [0].addEventListener('click',function(){
                 document.getElementsByClassName('list-group')[0].classList.toggle('show');  
-                //toggle? 있으면 제거 없으면 추가해줘라는 태그
+                //toggle 있으면 제거 없으면 추가해줘라는 태그
             })
 
             //queryselect 변환하기
