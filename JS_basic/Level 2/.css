@@ -1,0 +1,93 @@
+/* 
+    css 애니메이션 만드는법 
+    one-way UI  애니메이션 만드는법  A상태 -> B상태
+    
+    1. 시작 스타일 html / css 디자인
+    2. 최종 스타일
+    3. 원할때 최종스타일로 변하라고 코드짬
+    4. 시작스타일에 transition 추가
+
+*/
+:root {
+  scroll-behavior: auto;
+}
+.alert-box {
+    background-color: skyblue;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+  }
+  /* 슬라이드 애니메이션 */
+  .list-group {
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 1s;
+  }
+  .show {
+    display: block;
+    height: 206px;
+    visibility: inherit;
+  }
+  /* 여기까지 */
+  .black-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding: 30px;
+  
+    /*
+      display: none;
+       ↑ 이거말고  
+      */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+  }
+  .white-bg {
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+  }
+  .show-modal {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .main-bg {
+    padding: 100px 20px;
+    background-color: lightgray;
+  }
+  .dark {
+    background: black;
+  }
+  .light {
+    background: white;
+  }
+
+  .slide-container{
+    /* 브라우저 폭 */
+    width: 300vw;     
+    /* 마진보단 부드럽다 */        
+    transition: all 1s;
+    
+  }
+  .slide-box{
+    width: 100vw;
+    float: left;
+  }
+  .slide-box img {
+    width: 100%;
+  }
+  .navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+  }
+  .navbar-brand{
+    font-size: 25px;
+  }
