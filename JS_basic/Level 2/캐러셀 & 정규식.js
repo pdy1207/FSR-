@@ -147,17 +147,17 @@ css 추가
   </div>
     <script>
 
-      //다음사진 
+       //다음사진 
       var photo = 1;
      $('.next').on('click',function(){
         $('.slide-container').css('transform', 'translateX(-'+ photo +'00vw)');
-        photo +=1;
+        photo++;
      })
       //이전사진
-      var deforphoto = 0;
+      
      $('.defore').on('click',function(){
-      $('.slide-container').css('transform', 'translateX('+ deforphoto +'00vw)');
-      deforphoto -=1;
+      $('.slide-container').css('transform', 'translateX(-'+ photo +'00vw)');
+      photo--;
      })
 
       $('.slide-1').on('click',function(){
