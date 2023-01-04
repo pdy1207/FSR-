@@ -1,0 +1,64 @@
+.profile{
+    width: 100px; display: block; margin-left: auto; margin-right: auto;
+    /* 가운대정렬 */
+}
+.title{
+    text-align: center;
+    font-size: 16px;
+}
+p{
+    text-align: center;
+}
+/* 
+style ="" 1000점 id 100점 class 10점 tag 1점  
+
+div , p , h 기본적인 display : block (가로로 한 행을 다 차지)
+
+일부 스타일은 자동 상속된다 inherit
+*/
+
+.box{
+    width: 200px;    
+    background-color: cadetblue;
+    margin: 10px;
+    padding: 40px;    
+    border-radius: 5px;    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    color: white;    
+    box-shadow: 5px 5px gray;
+}
+
+.container{
+    width: 800px;
+}
+.header{
+    width: 100%;    
+    height: 100px;
+    background: aquamarine;
+}
+.left-menu{
+    /* float: left; */
+    width: 20%;
+    height: 400px;
+    background: cornflowerblue;
+    display: inline-block;
+    /* 내 크기만큼 차지해주세요 허나 공백 제거가 귀찮음*/
+    vertical-align: top;
+    
+}
+.right{
+    /* float: left; */
+    width: 80%;
+    height: 400px;
+    background: coral;
+    display: inline-block;
+}
+.footer{
+    width: 100%;    
+    height: 100px;
+    background: grey;
+    /* clear: both; */
+    /* float 다음에 오는 요소에게 주면 float로 발생하는 이상한 현상 해결가능 */
+}
