@@ -12,6 +12,10 @@
  3. 나중에 관리가 쉬울 것인가
  4. 성능문제가 없는가
 
+### `이벤트 버블링 및 function( e )`
+    
+![image](https://user-images.githubusercontent.com/110442250/210471390-11aabe8e-2994-4634-8eda-fcd30fb03058.png)
+
 ### `scroll`
 
 1. 스크롤바 조작할 때마다 코드 실행 가능
