@@ -162,7 +162,7 @@
     <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus a accusamus facere officia perferendis quaerat natus similique optio iusto reiciendis quia dolorem nobis, dolor hic, eveniet velit! Aspernatur, vitae impedit.</div>
 
     <script>
-      //div의 스크롤바 내린 양 + 눈에보이는 div높이 === div의 실제높이
+     //div의 스크롤바 내린 양 + 눈에보이는 div높이 === div의 실제높이
       $('.lorem').on('scroll',function(){
 
         // div 내의 스크롤바 내린 양 scrollTop
@@ -177,10 +177,17 @@
         console.log(scrolltot,scrollheight,divheight);    
 
         //여유를 두고 비교를하는게 좋다.
-        if((scrolltot+divheight) > scrollheight){
+        if((scrolltot+divheight) > scrollheight - 10){
           alert('다 읽었습니다.');
         }
       })
+      // scroll 다룰때 주의점 
+      // 1. scroll 이벤트 리스너 안의 코드는 1초에 60번 이상 실행
+      // 2. 바닥체크도 여러번 중복으로 해줌..
+      // ======================================================
+      // 1. 스크롤바 조작할 때마다 코드 실행 가능
+      // 2. 박스의 실제 높이 / 보이는 높이 
+      // 3. 스크롤양도 구할 수 있다.
     </script>
 
     <script>
