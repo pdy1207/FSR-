@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    /* 실제 width padding border 포함 */   
+    margin: 0px; 
+}
+.main-background{
+    width: 100%;
+    /* 부모의 % */
+    /* width % 문제는 PC 사이즈에서 너무 큼 그러므로 max-width 같이 쓰기. */
+    height: 500px;
+    background-image: url("https://codingapple.com/wp-content/uploads/2019/06/shoes.jpg");
+    background-size: cover;
+    /* 배경짤려도 상관없으니 빈공간 없이 배경으로 꽉 채워라 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* 스크롤 하였을때 */
+    /* filter: brightness(70%) ;  */
+    padding: 1px;
+    /* margin collapse 현상 싫으면 테두리 안붙게 해야함. */
+    text-align: center;
+    position: relative;
+}
+.main-title{
+    color: white;
+    font-size: 40px;
+    margin-top: 100px;
+}
+.main-ex{
+    color: white;
+    font-size: 20px;
+}
+.main-button{        
+    cursor: pointer;
+    font-size: 15px;
+    padding: 25px 35px;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;    
+    transition: all 0.5s;    
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 130px;
+    margin: auto;
+    width: 180px;
+}
+.main-button:hover{
+    border-radius: 25px;
+    background: black;
+}
+/* 
+    position 부여하면 
+    1. 좌표이동 가능 
+    2. 공중에 뜸
+    position : absolute 내 부모 태그가 기준보단 relative 가진 기준
+    position : relative 내 원래 위치를 기준으로 이동해주세요
+    static 좌표이동 x
+    fixed 현재 화면 기준    
+*/
+/* 
+    position 가운데 정렬 
+    position : absolute; 
+    left : 0;
+    right : 0; 
+    margin-left : auto;
+    margin-right : auto;
+    width : 적절히 
+*/
+.explain-box{
+    width: 80%;
+    max-width: 1000px;
+    /* width % 문제는 PC 사이즈에서 너무 큼 그러므로 max-width 같이 쓰기. */
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #eee;
+    position: relative;
+    top: 250px;    
+}
