@@ -1,0 +1,24 @@
+
+.cart-background{
+    width: 100%;    
+    background: #b2ccd6;
+    padding: 30px;
+}
+h3{
+    margin-left: 55px;
+}
+.cart-table {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;    
+    border-collapse: collapse;
+}
+.cart-table td, .cart-table th{
+    padding: 15px;
+    border-bottom: 1px solid #b2ccd6;
+}
+.cart-table th:nth-child(2){
+    width: 400px;
+}
