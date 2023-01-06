@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="cart.css">
+<button class="main-btn bg-red"> 더 알아보기</button>
+<button class="main-btn bg-blue"> 구매하기 </button>
+
+<style>
+   .main-btn{
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.bg-red{
+    background: red;
+}
+.bg-blue {
+    background: blue;
+}
+/* 뼈대용 class 살점용 class 따로
+    1. 장점 css 양이 줄어듭니다.
+    2. 유지보수 편리함
+*/ 
+</style>
+class 작명할때 창의력이 딸리면..
+BEM
+Block__Element--Modifier 룰
+
+class = 덩어리
+calss = 덩어리이름__역할
+calss = 덩어리이름__역할 -- 세부특징
+
+요즘은 react , vue...
+덩어리(Component) 단위로 HTML 파일 나눠서 코드 짬 
++ Component에만 사용가능한 CSS 생성가능
+
+OOCSS / BEM... 구글검색
+
+<div class="profile">
+    <img class="profile__img" >
+    <h4 class="profile__title"></h4>
+    <p class="profile__content"></p>
+    <button class="profile__button--red">버튼1</button>
+    <button class="profile__button--blue">버튼2</button>
+</div>
