@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body style="margin: 0">
+    <!-- <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item" style="flex-grow: 2">2</div>
+      <div class="flex-item">3</div>
+    </div> -->
+
+    <nav class="nav-container">
+      <div class="nav-item">ShooShop</div>
+      <div style="flex-grow: 1"></div>
+      <div class="nav-item">Products</div>
+      <div class="nav-item">Services</div>
+    </nav>
+    <div class="test"></div>
+    <div class="main-background">
+      <h4 class="main-title">Buy Our Shoes! Now On Sale</h4>
+      <p class="main-ex">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
+        voluptates et sint quasi temporibus veritatis?
+      </p>
+      <button class="main-button">구매하기</button>
+      <div class="explain-box">
+        <h4>How we design our shoes</h4>
+        <p class="pseudo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+          blanditiis alias provident deserunt voluptatibus, architecto sunt
+          excepturi iure perspiciatis, illo, impedit laudantium? Dignissimos
+          veniam laboriosam numquam atque illum! Quam, voluptas.
+        </p>
+      </div>
+      <br />
+      <div class="explain-box">
+        <h4>How we design our shoes</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+          blanditiis alias provident deserunt voluptatibus, architecto sunt
+          excepturi iure perspiciatis, illo, impedit laudantium? Dignissimos
+          veniam laboriosam numquam atque illum! Quam, voluptas.
+        </p>
+      </div>
+    </div>
+    <input type="file" class="input-file" style="background: skyblue;">
+    <!-- 
+      /* ::pseudo-element 사용법 */ 
+      허나 여기엔 Shoadow DOM 이 생겨있음
+    -->
+    <input type="text" placeholder="안녕하세요">
+    <progress value="0.5"></progress>
+    <input type="range">
+    <div class="title-container">
+      <div class="title-products">
+        <i class="fas fa-shopping-cart fa-3x"></i>
+        <h4>Fast Shipping</h4>
+        <p>lorem ipsum</p>
+      </div>
+      <div class="title-products">
+        <i class="fas fa-globe-asia fa-3x"></i>
+        <h4>Good Service</h4>
+        <p>lorem ipsum</p>
+      </div>
+
+      <div class="title-products">
+        <i class="fas fa-user fa-3x"></i>
+        <h4>Free Coupons</h4>
+        <p>lorem ipsum</p>
+      </div>
+      <div class="title-products">
+        <i class="fas fa-tshirt fa-3x"></i>
+        <h4>New Products</h4>
+        <p>lorem ipsum</p>
+      </div>
+    </div>
+    <div class="shop-bg">
+      <div class="shop-container">
+        <div class="shop-item">
+          <div style="position: relative;">
+            <div class="overlay-wrap">
+              <div class="overlay-black">
+                <span style="margin: auto; color: white;padding: auto;">$60</span>
+                <p style="margin: auto; color: white;padding: auto;">인기상품</p>
+              </div>
+            </div>
+            <img src="https://codingapple.com/wp-content/uploads/2019/07/product1-1.jpg" >
+          </div>
+        </div>
+        <div class="shop-item">
+          <div style="position: relative;">
+            <div class="overlay-wrap">
+              <div class="overlay-black">
+                <span style="margin: auto; color: white;padding: auto;">$60</span>
+                <p style="margin: auto; color: white;padding: auto;">인기상품</p>
+              </div>
+            </div>
+            <img src="https://codingapple.com/wp-content/uploads/2019/07/product2.jpg" >
+          </div>
+        </div>
+        <div class="shop-item">
+          <div style="position: relative;">
+            <div class="overlay-wrap">
+              <div class="overlay-black">
+                <span style="margin: auto; color: white;padding: auto;">$60</span>
+                <p style="margin: auto; color: white;padding: auto;">인기상품</p>
+              </div>
+            </div>
+            <img src="https://codingapple.com/wp-content/uploads/2019/07/product3.jpg" >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="main-background2">
+        <h4>contact us</h4>
+        <form action="index.html" method="POST">
+          <div class="email">
+            <p>Your Email</p>
+            <input type="text" placeholder="email@example.com" />
+          </div>
+          <div class="name">
+            <div class="name1" style="margin-right: 20px">
+              <p>First name</p>
+              <input type="text" />
+            </div>
+            <div class="name2">
+              <p>Last name</p>
+              <input type="text" />
+            </div>
+          </div>
+          <div class="message">
+            <p>Message</p>
+            <textarea cols="30" rows="9"></textarea>
+          </div>
+          <div class="send">
+            <label for="hint"
+              ><input type="checkbox" id="hint" /> Subscribe</label
+            >
+            <button type="submit">SEND</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/e53b3f6679.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
