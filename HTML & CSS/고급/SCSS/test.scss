@@ -1,3 +1,31 @@
+//@extend 문법
+//중복을 없애려면 뼈와 살을 분리하면 좋다.
+// % 임시 클래스  특징 : 단독으로 컴파일 되지않음.
+// class 전체를 복사해주는 @extend 문법
+// 중복된 스타일이 많으면
+// 1. 클래스로 묶어두고
+// 2. @extend로 필요할 때 복사하자
+
+%btn {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+.btn-green{
+    @extend %btn;
+    color: green;
+}
+
+.btn-red{
+    @extend %btn;
+    color: red;
+}
+
+.btn-blue{
+    @extend %btn;
+    color: blue;
+}
+
 
 $maincolor : #2a4cb2; //변수문법
 $sidecolor : #eee;
@@ -15,3 +43,51 @@ $fontsize : 16px;
 // 누르게 되면 css 생김 허나 컴퓨터는 scss를 못읽기 때문에 css 파일이 하나 더 생기는 이유임
 // 1. 어려운 단어 기억해야할 땐 변수 문법을 씁니다.
 // 2. 규칙적인 스타일 만들 때에도 변수 도움이 됩니다. 
+
+.main-bg{
+    font-size: 16px;
+}
+.main-bg button {
+    color: $sidecolor;
+}
+// ↑ 말고, nesting 문법 ↓
+// 관련있는 class들 묶을 때 좋다.
+// 단, 두개이상 중첩은 하지말자..복잡해짐
+.main-bg {
+    width: 100px;
+    h4{
+        font-size: $fontsize;
+    }
+    button{
+        color: $sidecolor;
+    }
+}
+
+$container : #efefef;
+
+%div{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background: $container;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.div1{        
+    @extend %div;
+    background: red;
+}
+.div2{
+    @extend %div;
+    background: green;
+}
+.div3{
+    @extend %div;
+    background: yellow;
+}
