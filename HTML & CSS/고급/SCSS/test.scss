@@ -1,0 +1,17 @@
+
+$maincolor : #2a4cb2; //변수문법
+$sidecolor : #eee;
+//규칙적인 스타일 만들 때에도 변수 도움이된다.
+$fontsize : 16px;
+
+.box{
+    width: 100%;
+    background: $maincolor;
+    font-size: ($fontsize - 2px); //허나 % 는 에러가 난다. * / 정수로
+}
+
+// Scss 장점
+// vscode 에선 Live Sass Compiler 설치 후 
+// 누르게 되면 css 생김 허나 컴퓨터는 scss를 못읽기 때문에 css 파일이 하나 더 생기는 이유임
+// 1. 어려운 단어 기억해야할 땐 변수 문법을 씁니다.
+// 2. 규칙적인 스타일 만들 때에도 변수 도움이 됩니다. 

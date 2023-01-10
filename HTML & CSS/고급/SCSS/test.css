@@ -1,0 +1,15 @@
+/* css 기본 문법 */
+:root{
+  --main-color : red;
+}
+
+.box2{
+  background: var(--main-color);
+  font-size: calc(40px - 20px);
+}
+
+.box {
+  width: 100%;
+  background: #2a4cb2;
+  font-size: 14px;
+}
