@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  /* 실제 width padding border 포함 */
+  margin: 0px;
+}
+
+.main-background {
+  width: 100%;
+  /* 부모의 % */
+  /* width % 문제는 PC 사이즈에서 너무 큼 그러므로 max-width 같이 쓰기. */
+  background-image: url("https://codingapple.com/wp-content/uploads/2019/06/shoes.jpg");
+  background-size: cover;
+  /* 배경짤려도 상관없으니 빈공간 없이 배경으로 꽉 채워라 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  /* 스크롤 하였을때 */
+  /* filter: brightness(70%) ;  */
+  padding: 1px;
+  /* margin collapse 현상 싫으면 테두리 안붙게 해야함. */
+  text-align: center;
+  position: relative;
+  margin-bottom: 250px;
+}
+.main-title {
+  color: white;
+  font-size: 40px;
+  margin-top: 100px;
+}
+.main-ex {
+  color: white;
+  font-size: 20px;
+}
+.main-button {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 25px 35px;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 130px;
+  margin: auto;
+  width: 180px;
+}
+.main-button:hover {
+  border-radius: 25px;
+  background: black;
+}
+/* 
+특정 요소가 다른 상태일 때 스타일 줄 수 있게 도와줌 === pseudo-class 
+:pseudo-class (다른 상태 일때) hover...
+::pseudo-element (내부의 일부분만 스타일줄 때)
+*/
+.pseudo::first-letter{
+  color: red;
+  font-size: 30px;
+}
+/* ::pseudo-element 사용법 */
+.input-file::file-selector-button{
+  background: skyblue;
+  border: none;
+  padding: 20px;
+}
+.input-file::file-selector-button:hover{
+  background: blue;
+}
+input[type=file]::-webkit-file-upload-button{
+  background: red;
+}
+input[type=text]::-webkit-input-placeholder{
+  color: red;
+}
+input[type=range]::-webkit-slider-runnable-track{
+  appearance: none;
+  background: red;
+}
+input[type=range]::-webkit-slider-thumb{
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+progress {
+  /*기본 배경은 없애주는게 좋습니다*/
+  -webkit-appearance: none;
+  -moz-appearance : none;
+  appearance: none;
+  background: white;
+/* IE10 호환성용 */
+  color: red;
+}
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+}
+progress::-webkit-progress-value {
+  background-color: red;
+  border-radius: 2px;
+}
+
+/*파이어폭스 호환성을 위해*/
+progress::-moz-progress-bar {
+  background-color: red;
+  border-radius: 2px;
+}
+
+/* 
+    position 부여하면 
+    1. 좌표이동 가능 
+    2. 공중에 뜸
+    position : absolute 내 부모 태그가 기준보단 relative 가진 기준
+    position : relative 내 원래 위치를 기준으로 이동해주세요
+    static 좌표이동 x
+    fixed 현재 화면 기준    
+*/
+/* 
+    position 가운데 정렬 
+    position : absolute; 
+    left : 0;
+    right : 0; 
+    margin-left : auto;
+    margin-right : auto;
+    width : 적절히 
+*/
+.explain-box {
+  width: 80%;
+  max-width: 1000px;
+  /* width % 문제는 PC 사이즈에서 너무 큼 그러므로 max-width 같이 쓰기. */
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  background-color: #eee;
+  position: relative;
+  top: 250px;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #373737;
+  position: relative;
+}
+.main-background2 {
+  width: 60%;
+  height: 70%;
+  background: #ffffff;
+  position: absolute;
+  padding: 45px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.main-background2 h4 {
+  font-size: 35px;
+  letter-spacing: -2px;
+  margin-bottom: 45px;
+  font-weight: 500;
+}
+.email {
+  margin-bottom: 15px;
+}
+.container p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #747474;
+  letter-spacing: -1px;
+}
+.container input,
+textarea {
+  padding: 13px;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  width: 100%;
+}
+input::placeholder {
+  color: #d8d8d8;
+}
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.message {
+  margin-bottom: 15px;
+}
+.send {
+  display: flex;
+}
+.send input {
+  width: 15px;
+  margin-top: -7px;
+  margin-right: 10px;
+}
+.send label {
+  letter-spacing: -1px;
+  margin-right: 190px;
+}
+.send button {
+  padding: 10px 60px;
+  border: none;
+  color: white;
+  background: #ffbf35;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 
+    폰트 및 커스텀 넣는법 
+    내가 준비한 폰트파일을 쓰기 위한것.
+    한글폰트 사이즈는 너무큼.
+    그러므로 1~2개만
+    용량을 줄이려면 .woff
+    혹은 구글폰트
+    폰트를 부드럽게 처리하려면?
+    transform: rotate(0.03deg);
+*/
+@font-face {
+  font-family: "나눔스퀘어";
+  src: url(font/NanumSquareAcR.woff);
+}
+body {
+  margin: 0;
+  font-family: "나눔스퀘어";
+  transform: rotate(0.03deg);
+}
+
+/* 
+  display : flex 
+  부모의 display : flex
+  단, 최대한 차지하려고 노력하는것
+*/
+.flex-container {
+  display: flex;
+  justify-content: center; /* 좌우 정렬 */
+  align-items: center; /* 상하 정렬 */
+  flex-direction: row; /* 가로 세로 */
+  flex-wrap: wrap; /* width 크면 밑으로 보내고 싶을때 */
+  /* style="flex-grow: 2" 비율로서의 설정 */
+}
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background: gray;
+  margin: 5px;
+}
+.nav-container {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 10px;
+  background: #ff7576;
+  color: white;
+}
+.nav-item {
+  margin-right: 15px;
+}
+.nav-item:nth-child(1) {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* 
+    vw(브라우저 폭에 비례) 
+    vh(브라우저 높이에 비례)
+    rem(기본 폰트사이즈에 비례) 기본폰트사이즈 === 16px
+    em(내 폰트사이즈의 x배)
+    큰 사이즈 -> 작은 사이즈 순을 작성
+
+    breakpoint 기준 px값은 다른 사람 따라하는걸 권장
+    1200px 
+    992px
+    768px
+    576px
+    4개 넘어가면 너무 복잡해짐
+  */
+
+@media screen and (max-width: 1200px) {
+  .main-title {
+    font-size: 30px;
+  }
+  .nav-item {
+    font-size: 12px;
+  }
+}
+
+.title-container {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  height: 30vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.title-products {
+  width: 100%;
+  margin-bottom: 5px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.title-products h4,
+i {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .title-products {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .title-container {
+    flex-wrap: wrap;
+    height: 70vh;
+    margin-top: 15px;
+  }
+  .title-products h4,
+  i {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-products {
+    width: 100%;
+  }
+  .title-container {
+    width: 100%;
+    height: 130vh;
+  }
+  .title-products h4,
+  i {
+    margin-bottom: 15px;
+  }
+}
+.title-products i {
+  background: burlywood;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  padding-top: 25px;
+  box-sizing: border-box;
+  color: white;
+}
+/* 
+  one-way 애니메이션 만드는 step
+  1. 시작 스타일 만들기
+  2. 최종 스타일 만들기 
+  3. 언제 최종스타일로 변하는지
+  4. transition으로 애니메이션
+*/
+.shop-bg{
+  background: #eee;
+  padding: 20px;
+}
+.shop-container{
+  display: flex;
+  max-width: 90%;
+  margin: auto;  
+}
+.shop-item{
+  width: 33%;  
+  padding: 10px;
+}
+.shop-item img{
+  width: 100%;
+  display: block;
+}
+
+.overlay-wrap{
+  position: absolute;
+  width: 100%;
+  height: 100%;  
+  overflow: hidden;
+  
+}
+.overlay-black{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: 100%;
+  transition: all 1s;
+  text-align: justify;  
+}
+.overlay-wrap:hover .overlay-black{
+  margin-top: 50%;
+}
+
+/* 비디오 배경 넣기 */
+.video-box {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container {
+  position: absolute;
+  width : 100%;
+  
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  z-index: 0;
+}
