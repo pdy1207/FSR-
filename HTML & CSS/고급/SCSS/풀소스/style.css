@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  color: brown;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 10px;
+  letter-spacing: -1px;
+}
+
+.sh-list li {
+  list-style: none;
+  padding: 15px;
+  border: 1px solid #eee;
+}
+.sh-list li:hover {
+  background: skyblue;
+  color: white;
+}
+
+.alert-box-blue, .alert-box-green, .alert-box-yellow {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  background: skyblue;
+  color: white;
+}
+
+.alert-box-yellow {
+  background: orange;
+  color: white;
+}
+
+.alert-box-green {
+  background: yellowgreen;
+  color: white;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.row .col-6 {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+.row .col-4 {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}/*# sourceMappingURL=style.css.map */

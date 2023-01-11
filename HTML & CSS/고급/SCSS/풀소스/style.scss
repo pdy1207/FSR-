@@ -1,0 +1,86 @@
+// Mixin , use 문법 등
+
+// @mixin 문법 
+// 긴 코드를 짧은 단어로 축약할때 씀
+// 글자 중간에 $변수나 $파라미터 넣을 땐 #{$변수명}
+
+// 다른 파일에 있는 내용 가져오고 싶을때는...
+// @use'파일경로';
+
+// 컴파일 하기 싫은 파일은 _파일명.scss작명
+@use 'reset';
+
+@mixin fontStyle($구멍) {
+    font-size: $구멍;
+    letter-spacing: -1px;
+}
+h2 {
+    @include fontStyle(40px);
+    color: reset.$main_color; 
+    // 요런식으로 가져올 수있음
+}
+h3{
+    @include fontStyle(20px);
+}
+h4{
+    @include fontStyle(10px);
+}
+
+
+
+// function / if / for 이런것들도 있는데 필요하면 찾아 써도 무방하다.
+
+
+// 팁! 초보는 sass문법부터 쓰기 어려우면, 
+// css 부터 짜고 sass 문법으로 축약을해보는 방법으로
+
+// nesting문법
+.sh-list {
+    li{
+        list-style: none;
+        padding: 15px;
+        border: 1px solid #eee;
+    }
+    li:hover{
+        background: skyblue;
+        color: white;
+    }
+}
+
+.alert-box-blue{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    background: skyblue;
+    color: white;
+}
+.alert-box-yellow{
+    @extend .alert-box-blue;
+    background: orange;
+    color: white;
+}
+.alert-box-green{
+    @extend .alert-box-blue;
+    background: yellowgreen;
+    color: white;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+@mixin column($width){
+    float: left;
+    width: $width;
+    padding: 15px;
+}
+
+// 이게 bootstrap 직접만드는것..
+.row .col-6{ 
+    @include column(50%);
+}
+.row .col-4{ 
+    @include column(33.33%);
+}
+// mixin $변수 @extend 이런것 부터 쓸 생각하면 어렵다.
+// 그냥 css부터 작성해보자
