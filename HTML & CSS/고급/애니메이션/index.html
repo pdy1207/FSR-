@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Document</title>
+</head>
+<style>
+    body{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    @keyframes shake{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-8deg);
+    }
+    50%{
+        transform: rotate(8deg);
+    }
+    75%{
+        transform: rotate(-8deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+    }
+
+    .ani-button{
+        padding: 15px 20px;
+        font-size: 20px;
+        background: skyblue;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        display: block;
+        margin-left: 350px;
+    }
+    .ani-button:hover{
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }/* 버튼 애니메이션 */
+
+    @keyframes turn {
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(-15deg);
+        }
+        100%{
+            transform: rotate(45deg) 
+            scale(1.5);
+        }
+    }
+    .ani-x{
+        margin: 150px auto;
+        text-align: center;
+        font-size: 70px;
+        width: 84px;
+        cursor: pointer;
+    }
+    .ani-x:hover{
+        animation-name: turn;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    /* +버튼 x버튼 되면서 커지기 */
+
+
+    @keyframes slide{
+        0%{
+            transform: translateX(-250px);
+        }
+        50%{
+            transform: translateX(20px) skewX(-30deg);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+
+
+    .ani-navbar{
+        width: 200px;
+        height: 100%;
+        background: black;
+        color: white;
+        padding: 25px;
+        position: fixed;
+        z-index: 5;
+        text-align: right;
+        transform: translateX(-150px);
+        transition: all 1s;
+    }
+    .ani-navbar:hover{
+        transform: translateX(0px);
+        text-align: center;
+    }
+    .ani-navbar:hover p{
+        animation-name: slide;
+        animation-duration: 1s;
+    }
+</style>
+<body>
+    <nav class="ani-navbar">
+        <h4>Menu</h4>
+        <p style="text-align: center;">Item</p>
+    </nav>
+    <button class="ani-button">흔들</button>
+    <div class="ani-x">+</div>
+</body>
+</html>
